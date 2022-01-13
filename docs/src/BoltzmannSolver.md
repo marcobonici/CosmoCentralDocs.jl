@@ -23,7 +23,7 @@ for i in 1:length(MultipolesWidths)
     MultipolesArray[i] = (MultipolesArrayTemp[i+1]+MultipolesArrayTemp[i])/2
 end
 
-path = joinpath(pwd(),"..","..","test","p_mm")
+path = joinpath(pwd(),"..","..","forecast_pmm","PowerSpectrum","dvar_central_step_0","p_mm")
 PowerSpectrum, BackgroundQuantities, CosmologicalGrid =
 CosmoCentral.ReadPowerSpectrumBackground(path, MultipolesArray, MultipolesWidths)
 CosmoCentral.ExtractGrowthFactor!(BackgroundQuantities, PowerSpectrum)
@@ -70,7 +70,7 @@ plot!(p, CosmologicalGrid.KArray, PowerSpectrum.PowerSpectrumNonlinArray[:,1],
 xaxis=:log, yaxis=:log, label = L"\mathrm{Nonlinear}")
 ```
 When performing forecasts, ``P_{\delta \delta}(k,z)`` can be valuated once and stored (we 
-provide a precomputed set of spectra [here](https://zenodo.org/record/5270335)), so
+provide a precomputed set of spectra [on Zenodo](https://zenodo.org/record/5270335)), so
 their computational impact is reduced. However, when evaluating ``C_\ell``'s, there is a not
 negligible impact of ``P_{ \delta\delta}(k,z)`` interpolation and evaluation on the Limber 
 ``k-``grid.

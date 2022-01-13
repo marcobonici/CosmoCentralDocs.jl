@@ -24,7 +24,7 @@ for i in 1:length(MultipolesWidths)
     MultipolesArray[i] = (MultipolesArrayTemp[i+1]+MultipolesArrayTemp[i])/2
 end
 
-path = joinpath(pwd(),"..","..","test","p_mm")
+path = joinpath(pwd(),"..","..","forecast_pmm","PowerSpectrum","dvar_central_step_0","p_mm")
 PowerSpectrum, BackgroundQuantities, CosmologicalGrid =
 CosmoCentral.ReadPowerSpectrumBackground(path, MultipolesArray, MultipolesWidths)
 CosmoCentral.ExtractGrowthFactor!(BackgroundQuantities, PowerSpectrum)
