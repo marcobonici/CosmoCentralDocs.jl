@@ -20,6 +20,7 @@ jobs:
           version: '1.7'
       - run: >
           sudo apt-get install --no-install-recommends gfortran python3-setuptools python3-wheel
+          && pwd
           && pip3 install numpy && pip3 install Cython && pip3 install classy
           && wget https://zenodo.org/record/5270335/files/forecast_pmm.tar.xz\?download=1
           && mv forecast_pmm.tar.xz\?download\=1 forecast_pmm.tar.xz
