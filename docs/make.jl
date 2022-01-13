@@ -11,7 +11,7 @@ makedocs(
     modules = [CosmoCentral],
     format = Documenter.HTML(prettyurls = get(ENV, "CI", nothing) == "true",
     sidebar_sitename=false),
-    sitename = "CosmoCentral.jl",
+    sitename = "CosmoCentralDocs.jl",
     authors  = "Marco Bonici",
     pages = [
         "Home" => "index.md",
@@ -29,6 +29,6 @@ makedocs(
 )
 
 deploydocs(
-    repo = "github.com/marcobonici/CosmoCentral.jl.git",
-    devbranch = "develop"
+    repo = "github.com/marcobonici/CosmoCentralDocs.jl.git",
+    devbranch = "main"
 )
