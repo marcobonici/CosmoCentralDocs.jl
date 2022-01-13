@@ -1,5 +1,6 @@
 using Documenter
 using CosmoCentral
+using CosmoCentralDocs
 using Plots
 using PlotThemes
 
@@ -8,7 +9,7 @@ ENV["GKSwstype"] = "100"
 push!(LOAD_PATH,"../src/")
 
 makedocs(
-    modules = [CosmoCentral],
+    modules = [CosmoCentralDocs],
     format = Documenter.HTML(prettyurls = get(ENV, "CI", nothing) == "true",
     sidebar_sitename=false),
     sitename = "CosmoCentralDocs.jl",
