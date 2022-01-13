@@ -24,7 +24,6 @@ makedocs(
         "Angular Coefficients" => "AngularCoefficients.md",
         "Derivatives" => "Derivatives.md",
         "Covariance Matrix" => "Covariance.md",
-        "Fisher Matrix" => "Fisher.md",
         "Math Utils" => "MathUtils.md"
     ]
 )
