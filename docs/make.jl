@@ -1,6 +1,5 @@
 using Documenter
 using CosmoCentral
-using CosmoCentralDocs
 using Plots
 using PlotThemes
 
