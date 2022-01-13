@@ -2,6 +2,7 @@ using Documenter
 using CosmoCentral
 using Plots
 using PlotThemes
+using CosmoCentralDocs
 
 ENV["GKSwstype"] = "100"
 
