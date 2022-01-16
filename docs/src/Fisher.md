@@ -8,10 +8,7 @@ using CairoMakie
 using Makie
 using LinearAlgebra
 using FisherPlot
-run(`wget https://zenodo.org/record/5270335/files/forecast_pmm.tar.xz\?download=1`);
-run(`mv forecast_pmm.tar.xz\?download\=1 forecast_pmm.tar.xz`);
-run(`tar xvf forecast_pmm.tar.xz`);
-run(`rm -rf forecast_pmm.tar.xz`);
+
 MultipolesArrayTemp = CosmoCentral.LogSpaced(10.,3000., 101)
 MultipolesArray = zeros(100)
 MultipolesWidths = CosmoCentral.Difference(MultipolesArrayTemp)
@@ -28,7 +25,7 @@ CosmoDict = JSON.parsefile(pwd()*"/../../input_files/Cosmology.json")
 ForecastContainer = CosmoCentral.InitializeForecastContainer(CosmoDict, ProbesDict,
 cosmogrid, steps)
 CosmoCentral.CreateDirectoriesForecast!(ForecastContainer, pwd()*"/test_forecast/")
-PathInputPmm = pwd()*"/forecast_pmm/PowerSpectrum/"
+PathInputPmm = joinpath(pwd(),"..","..","forecast_pmm","PowerSpectrum")
 PathOutputCℓ = pwd()*"/test_forecast/Angular/"
 PathOutput = pwd()*"/test_forecast"
 PathCentralCℓ = pwd()*"/test_forecast/Angular/dvar_central_step_0/cl"
