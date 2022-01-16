@@ -1,6 +1,7 @@
 using Documenter
 using CosmoCentral
 using Plots
+using FisherPlot
 using PlotThemes
 using CosmoCentralDocs
 
@@ -25,7 +26,8 @@ makedocs(
         "Angular Coefficients" => "AngularCoefficients.md",
         "Derivatives" => "Derivatives.md",
         "Covariance Matrix" => "Covariance.md",
-        "Math Utils" => "MathUtils.md"
+        "Math Utils" => "MathUtils.md",
+	"Fisher" => "Fisher.md"
     ]
 )
 
