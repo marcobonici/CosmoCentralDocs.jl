@@ -25,7 +25,7 @@ CosmoDict = JSON.parsefile(pwd()*"/../../input_files/Cosmology.json")
 ForecastContainer = CosmoCentral.InitializeForecastContainer(CosmoDict, ProbesDict,
 cosmogrid, steps)
 CosmoCentral.CreateDirectoriesForecast!(ForecastContainer, pwd()*"/test_forecast/")
-PathInputPmm = joinpath(pwd(),"..","..","forecast_pmm","PowerSpectrum")
+PathInputPmm = pwd()*"/../../forecast_pmm/PowerSpectrum/")
 PathOutputCℓ = pwd()*"/test_forecast/Angular/"
 PathOutput = pwd()*"/test_forecast"
 PathCentralCℓ = pwd()*"/test_forecast/Angular/dvar_central_step_0/cl"
