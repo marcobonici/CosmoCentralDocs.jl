@@ -1,0 +1,11 @@
+{
+  "Lensing": {
+    "present": true,
+    "intrinsic_alignment" : true,
+    "intrinsic_alignment_model" : "ExtendedNL"
+  },
+  "PhotometricGalaxy":{
+    "present": true,
+    "Bias" : "EuclidBias"
+  }
+}
