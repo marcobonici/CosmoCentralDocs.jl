@@ -122,15 +122,15 @@ CosmologicalGrid::CosmoCentral.CosmologicalGrid, ciccio::String)
 Here we show plots for some Fisher Matrices (this code will probably soon released in a
 separate package).
 ```@example tutorial
-canvas = FisherPlot.PrepareCanvas(BigLaTeXArray, central_values, limits, ticks, probes, colors,
+canvas = FisherPlot.preparecanvas(BigLaTeXArray, central_values, limits, ticks, probes, colors,
 PlotPars)
-FisherPlot.PaintCorrMattrix!(canvas, central_values,
+FisherPlot.paintcorrmatrix!(canvas, central_values,
 CosmoCentral.SelectCorrelationMatrix(FisherWL, pars_list), "deepskyblue3")
-FisherPlot.PaintCorrMattrix!(canvas, central_values,
+FisherPlot.paintcorrmatrix!(canvas, central_values,
 CosmoCentral.SelectCorrelationMatrix(FisherGCNew, pars_list), "darkorange1")
-FisherPlot.PaintCorrMattrix!(canvas, central_values,
+FisherPlot.paintcorrmatrix!(canvas, central_values,
 CosmoCentral.SelectCorrelationMatrix(FisherGCNewplusWL, pars_list), "green")
-FisherPlot.PaintCorrMattrix!(canvas, central_values,
+FisherPlot.paintcorrmatrix!(canvas, central_values,
 CosmoCentral.SelectCorrelationMatrix(FisherFinal, pars_list), "red")
 canvas
 ```
